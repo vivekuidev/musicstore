@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace MusicStoreApp.Models
 {
-    public class Class1
+    public class AlbumService
     {
+
     }
 }
