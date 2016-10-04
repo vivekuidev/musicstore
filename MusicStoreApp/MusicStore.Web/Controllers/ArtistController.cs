@@ -16,15 +16,23 @@ namespace MusicStore.Web.Controllers
             _service = new ArtistService();
         }
         // GET: Artist
+        [HttpGet]
         public ActionResult Index()
         {
             var artists = _service.GetArtists();
             return View(artists);
         }
-
+        [HttpGet]
         public ActionResult Create()
         { var artist = new Artist();
             return View(artist);
+        }
+
+        [HttpPost]
+        public ActionResult Create(Artist artist)
+        {
+            _service.CreateArtist(artist);
+            return View("Index");
         }
        
     }
