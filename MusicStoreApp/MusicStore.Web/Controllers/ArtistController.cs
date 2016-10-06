@@ -24,8 +24,8 @@ namespace MusicStore.Web.Controllers
         }
         [HttpGet]
         public ActionResult Create()
-        { var artist = new Artist();
-            return View(artist);
+        { 
+            return View();
         }
 
         [HttpPost]

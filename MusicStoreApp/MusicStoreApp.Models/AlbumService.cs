@@ -24,6 +24,11 @@ namespace MusicStoreApp.Models
             var result = _context.Albums.FirstOrDefault(x => x.AlbumId == id);
             return result;
         }
+        public int CreateAlbum(Album album)
+        {
+             _context.Albums.Add(album);
+            return _context.SaveChanges();
+        }
 
     }
 }
