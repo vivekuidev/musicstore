@@ -1,6 +1,10 @@
 ﻿@model IEnumerable<MusicStoreApp.Models.Album>
-
+@using MusicStoreApp.Models;
 @{
+    var artistService = new ArtistService();
+    var artistList = artistService.GetArtists();
+    
+
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
